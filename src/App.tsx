@@ -124,18 +124,18 @@ export default function RetamaMaquinaria() {
   ];
 
   const maquinariaRenta = [
-    { name: "Compactadora", image: "/Images/Renta1.jpeg", description: "Compactadora vibratoria ideal para compactar suelos, grava y asfalto en obras pequeñas y medianas." },
-    { name: "Revolvedora", image: "/Images/Renta2.jpeg", description: "Revolvedora de concreto resistente para preparación rápida y uniforme de mezcla en construcción." },
-    { name: "Rodillos Vibrocompactador de 1.2 ton", image: "/Images/Renta3.jpeg", description: "Rodillo ligero perfecto para compactación en banquetas, áreas pequeñas y mantenimiento urbano." },
-    { name: "Rodillo Vibrocompactador de 3.5 ton", image: "/Images/Renta4.jpeg", description: "Rodillo pesado ideal para compactación de bases, caminos y superficies en obra civil." },
-    { name: "Allanadoras de concreto", image: "/Images/Renta5.jpeg", description: "Allanadoras profesionales para acabado fino y nivelación de superficies de concreto." },
-    { name: "Vibrador de concreto", image: "/Images/Renta6.jpeg", description: "Equipo esencial para eliminar burbujas y lograr mayor resistencia en estructuras de concreto." },
-    { name: "Rompedoras de concreto", image: "/Images/Renta7.jpeg", description: "Martillos rompedores potentes para demolición de concreto, pavimento y estructuras." },
-    { name: "Máquinas de soldar miller bobcat", image: "/Images/Renta8.jpeg", description: "Equipo de soldadura industrial ideal para trabajos en campo con generador integrado." },
-    { name: "Cortadora de concreto", image: "/Images/Renta9.jpeg", description: "Cortadora de alto rendimiento para cortes precisos en concreto y pavimento." },
-    { name: "Plantas de luz 3500, 5000 y 8000 watts", image: "/Images/Renta10.jpeg", description: "Plantas de luz portátiles ideales para respaldar energía en obras y eventos." },
-    { name: "Generadores remolcables de 25 y 45 kva", image: "/Images/Renta11.jpeg", description: "Generadores industriales remolcables de alta potencia para proyectos grandes." },
-    { name: "Torres de iluminación", image: "/Images/Renta12.jpeg", description: "Torres de iluminación para trabajos nocturnos y zonas con poca visibilidad." },
+    { name: "Compactadora", image: "/Images/Renta1.png", description: "Compactadora vibratoria ideal para compactar suelos, grava y asfalto en obras pequeñas y medianas." },
+    { name: "Revolvedora", image: "/Images/Renta2.jpg", description: "Revolvedora de concreto resistente para preparación rápida y uniforme de mezcla en construcción." },
+    { name: "Rodillos Vibrocompactador de 1.2 ton", image: "/Images/Renta4.webp", description: "Rodillo ligero perfecto para compactación en banquetas, áreas pequeñas y mantenimiento urbano." },
+    { name: "Rodillo Vibrocompactador de 3.5 ton", image: "/Images/Renta3.webp", description: "Rodillo pesado ideal para compactación de bases, caminos y superficies en obra civil." },
+    { name: "Allanadoras de concreto", image: "/Images/Renta5.webp", description: "Allanadoras profesionales para acabado fino y nivelación de superficies de concreto." },
+    { name: "Vibrador de concreto", image: "/Images/Renta6.webp", description: "Equipo esencial para eliminar burbujas y lograr mayor resistencia en estructuras de concreto." },
+    { name: "Rompedoras de concreto", image: "/Images/Renta7.jpg", description: "Martillos rompedores potentes para demolición de concreto, pavimento y estructuras." },
+    { name: "Máquinas de soldar miller bobcat", image: "/Images/Renta8.jpg", description: "Equipo de soldadura industrial ideal para trabajos en campo con generador integrado." },
+    { name: "Cortadora de concreto", image: "/Images/Renta9.jpg", description: "Cortadora de alto rendimiento para cortes precisos en concreto y pavimento." },
+    { name: "Plantas de luz 3500, 5000 y 8000 watts", image: "/Images/Renta10.webp", description: "Plantas de luz portátiles ideales para respaldar energía en obras y eventos." },
+    { name: "Generadores remolcables de 25 y 45 kva", image: "/Images/Renta11.webp", description: "Generadores industriales remolcables de alta potencia para proyectos grandes." },
+    { name: "Torres de iluminación", image: "/Images/Renta12.jpg", description: "Torres de iluminación para trabajos nocturnos y zonas con poca visibilidad." },
   ];
 
   const sections = ["Inicio", "Máquinas en venta", "Máquinas en renta", "Contacto"];
