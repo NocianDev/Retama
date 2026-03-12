@@ -7,9 +7,9 @@ export default function RetamaMaquinaria() {
     description:
       "En Retama Maquinaria ofrecemos soluciones confiables para construcción, industria y trabajo pesado. Contamos con equipos seleccionados para venta y renta, atención personalizada y servicio orientado a cubrir proyectos de distinta escala.",
 
-    email: "ricky_salas10@hotmail.com",
-    whatsapp: "+52 1 81 8088 9636",
-    phone: "+52 1 81 8088 9636",
+    email: "ricardo_retama@hotmail.com",
+    whatsapp: "+5218180889636",
+    phone: "+528180593032",
 
     logo: "/Images/Logo.png",
     heroImage: "/Images/Hero.jpeg",
