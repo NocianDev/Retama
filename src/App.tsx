@@ -2,24 +2,22 @@ import { useEffect, useState } from "react";
 
 export default function RetamaMaquinaria() {
   const company = {
-    name: "Retama Maquinaria",
+    name: "Retama",
     slogan: "Venta y renta de maquinaria con respaldo profesional",
     description:
       "En Retama Maquinaria ofrecemos soluciones confiables para construcción, industria y trabajo pesado. Contamos con equipos seleccionados para venta y renta, atención personalizada y servicio orientado a cubrir proyectos de distinta escala.",
 
-    email: "ventas@retamamaquinaria.com",
-    whatsapp: "+52 81 0000 0000",
-    phone: "+52 81 0000 0000",
+    email: "ricky_salas10@hotmail.com",
+    whatsapp: "+52 1 81 8088 9636",
+    phone: "+52 1 81 8088 9636",
 
     logo: "/Images/Logo.png",
-    heroImage: "/Images/Venta1.jpeg",
+    heroImage: "/Images/Hero.jpeg",
 
-    // Puedes pegar directamente el link EMBED de Google Maps
-    // https://www.google.com/maps -> compartir -> insertar mapa
     locations: [
       {
         title: "Sucursal 1",
-        address: "Sanata Catarina, Nuevo León",
+        address: "Santa Catarina, Nuevo León",
         schedule: "Lunes a Viernes: 8:00 AM - 6:00 PM | Sábado: 8:00 AM - 2:00 PM",
         mapEmbed:
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.6845759993744!2d-100.46540809999999!3d25.6817488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662996b90158c59%3A0x4c93c6b953d991bd!2sRetama%20Maquinaria!5e0!3m2!1ses!2smx!4v1773340678138!5m2!1ses!2smx",
@@ -34,8 +32,7 @@ export default function RetamaMaquinaria() {
     ],
 
     social: {
-      facebook: "https://facebook.com/retamamaquinaria",
-      instagram: "https://instagram.com/retamamaquinaria",
+      facebook: "https://www.facebook.com/p/Retama-Maquinaria-100063958413759/?locale=es_LA",
     },
   };
 
@@ -127,30 +124,18 @@ export default function RetamaMaquinaria() {
   ];
 
   const maquinariaRenta = [
-    {
-      name: "Retroexcavadora",
-      image: "/renta-1.jpg",
-      description:
-        "Retroexcavadora en renta, ideal para excavación, carga de material, limpieza de terreno y trabajos generales de construcción.",
-    },
-    {
-      name: "Plataforma de Elevación",
-      image: "/renta-2.jpg",
-      description:
-        "Plataforma de elevación segura y funcional para mantenimientos, instalaciones y maniobras en altura con mayor estabilidad.",
-    },
-    {
-      name: "Mini Cargador",
-      image: "/renta-3.jpg",
-      description:
-        "Mini cargador en renta, excelente para maniobras rápidas, acarreo de materiales y trabajo en áreas de acceso limitado.",
-    },
-    {
-      name: "Cortadora de Concreto",
-      image: "/renta-4.jpg",
-      description:
-        "Cortadora de concreto eficiente para cortes limpios en pavimento, banquetas, pisos y trabajos especializados de obra civil.",
-    },
+    { name: "Compactadora", image: "/Images/Renta1.jpeg", description: "Compactadora vibratoria ideal para compactar suelos, grava y asfalto en obras pequeñas y medianas." },
+    { name: "Revolvedora", image: "/Images/Renta2.jpeg", description: "Revolvedora de concreto resistente para preparación rápida y uniforme de mezcla en construcción." },
+    { name: "Rodillos Vibrocompactador de 1.2 ton", image: "/Images/Renta3.jpeg", description: "Rodillo ligero perfecto para compactación en banquetas, áreas pequeñas y mantenimiento urbano." },
+    { name: "Rodillo Vibrocompactador de 3.5 ton", image: "/Images/Renta4.jpeg", description: "Rodillo pesado ideal para compactación de bases, caminos y superficies en obra civil." },
+    { name: "Allanadoras de concreto", image: "/Images/Renta5.jpeg", description: "Allanadoras profesionales para acabado fino y nivelación de superficies de concreto." },
+    { name: "Vibrador de concreto", image: "/Images/Renta6.jpeg", description: "Equipo esencial para eliminar burbujas y lograr mayor resistencia en estructuras de concreto." },
+    { name: "Rompedoras de concreto", image: "/Images/Renta7.jpeg", description: "Martillos rompedores potentes para demolición de concreto, pavimento y estructuras." },
+    { name: "Máquinas de soldar miller bobcat", image: "/Images/Renta8.jpeg", description: "Equipo de soldadura industrial ideal para trabajos en campo con generador integrado." },
+    { name: "Cortadora de concreto", image: "/Images/Renta9.jpeg", description: "Cortadora de alto rendimiento para cortes precisos en concreto y pavimento." },
+    { name: "Plantas de luz 3500, 5000 y 8000 watts", image: "/Images/Renta10.jpeg", description: "Plantas de luz portátiles ideales para respaldar energía en obras y eventos." },
+    { name: "Generadores remolcables de 25 y 45 kva", image: "/Images/Renta11.jpeg", description: "Generadores industriales remolcables de alta potencia para proyectos grandes." },
+    { name: "Torres de iluminación", image: "/Images/Renta12.jpeg", description: "Torres de iluminación para trabajos nocturnos y zonas con poca visibilidad." },
   ];
 
   const sections = ["Inicio", "Máquinas en venta", "Máquinas en renta", "Contacto"];
@@ -165,31 +150,29 @@ export default function RetamaMaquinaria() {
   const sectionButtonClass = (name: string) =>
     `px-4 py-2 rounded-full text-sm md:text-base transition-all duration-300 border ${
       activeSection === name
-        ? "bg-yellow-500 text-black border-yellow-400 shadow-lg"
-        : "bg-white/10 text-white border-white/15 hover:bg-white/20"
+        ? "bg-orange-500 text-white border-orange-500 shadow-lg"
+        : "bg-orange-100 text-slate-800 border-orange-200 hover:bg-orange-200"
     }`;
 
   const cardClass =
-    "bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden hover:-translate-y-1 hover:shadow-2xl transition-all duration-300";
+    "bg-white rounded-3xl shadow-xl border border-orange-200 overflow-hidden hover:-translate-y-1 hover:shadow-2xl transition-all duration-300";
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white relative overflow-x-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(245,158,11,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.12),_transparent_28%)] pointer-events-none" />
-
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-white/10">
+    <div className="min-h-screen bg-white text-slate-900 relative overflow-x-hidden">
+      <header className="sticky top-0 z-50 bg-white border-b border-orange-200">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-4 min-w-0">
               <img
                 src={company.logo}
                 alt="Logo Retama Maquinaria"
-                className="w-20 h-20 md:w-28 md:h-28 object-contain rounded-2xl p-1 shrink-0"
+                className="w-30 h-30 md:w-48 md:h-40 object-contain rounded-2xl p-1 shrink-0"
               />
               <div className="min-w-0">
-                <h1 className="text-3xl md:text-5xl font-black tracking-wide text-yellow-400 leading-tight">
+                <h1 className="text-3xl md:text-5xl font-black tracking-wide text-orange-500 leading-tight">
                   {company.name}
                 </h1>
-                <p className="text-slate-300 text-sm md:text-base max-w-2xl">
+                <p className="text-slate-600 text-sm md:text-base max-w-2xl">
                   {company.slogan}
                 </p>
               </div>
@@ -197,25 +180,10 @@ export default function RetamaMaquinaria() {
 
             <button
               type="button"
-              className="md:hidden inline-flex items-center justify-center w-12 h-12 rounded-2xl border border-white/15 bg-white/10 text-white hover:bg-white/20 transition shrink-0"
+              className="md:hidden inline-flex items-center justify-center w-12 h-12 rounded-2xl border border-orange-200 bg-orange-100 text-orange-600 hover:bg-orange-200 transition shrink-0"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              aria-label="Abrir menú"
-              aria-expanded={mobileMenuOpen}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                {mobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                )}
-              </svg>
+              ☰
             </button>
 
             <nav className="hidden md:flex flex-wrap gap-2 justify-end">
@@ -250,30 +218,32 @@ export default function RetamaMaquinaria() {
       </header>
 
       <main className="relative z-10">
+
         {activeSection === "Inicio" && (
           <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <span className="inline-block px-4 py-2 rounded-full bg-yellow-500/15 text-yellow-400 border border-yellow-500/30 text-sm font-semibold mb-4">
+                <span className="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-600 border border-orange-200 text-sm font-semibold mb-4">
                   Soluciones para construcción e industria
                 </span>
-                <h2 className="text-4xl md:text-6xl font-black leading-tight mb-5">
+                <h2 className="text-4xl md:text-6xl font-black leading-tight mb-5 text-orange-500">
                   Maquinaria confiable para impulsar tus proyectos
                 </h2>
-                <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
                   {company.description}
                 </p>
+
                 <div className="flex flex-wrap gap-4">
                   <button
                     onClick={() => setActiveSection("Máquinas en venta")}
-                    className="px-6 py-3 rounded-2xl bg-yellow-500 text-black font-bold shadow-lg hover:scale-[1.02] transition"
+                    className="px-6 py-3 rounded-2xl bg-orange-500 text-white font-bold shadow-lg hover:scale-[1.02] transition"
                     type="button"
                   >
                     Ver máquinas en venta
                   </button>
                   <button
                     onClick={() => setActiveSection("Máquinas en renta")}
-                    className="px-6 py-3 rounded-2xl bg-white/10 border border-white/15 font-semibold hover:bg-white/20 transition"
+                    className="px-6 py-3 rounded-2xl bg-orange-100 border border-orange-200 text-slate-800 font-semibold hover:bg-orange-200 transition"
                     type="button"
                   >
                     Ver máquinas en renta
@@ -282,8 +252,7 @@ export default function RetamaMaquinaria() {
               </div>
 
               <div className="relative">
-                <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-yellow-500/25 to-cyan-400/10 blur-2xl" />
-                <div className="relative bg-slate-900 border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl">
+                <div className="relative bg-white border border-orange-200 rounded-[2rem] overflow-hidden shadow-2xl">
                   <img
                     src={company.heroImage}
                     alt="Maquinaria industrial"
@@ -293,15 +262,14 @@ export default function RetamaMaquinaria() {
               </div>
             </div>
 
-            {/* UBICACIONES CON GOOGLE MAPS */}
             <div className="mt-16">
-              <h3 className="text-3xl font-black mb-8 text-yellow-400">Nuestras ubicaciones</h3>
+              <h3 className="text-3xl font-black mb-8 text-orange-500">Nuestras ubicaciones</h3>
 
               <div className="grid md:grid-cols-2 gap-8">
                 {company.locations.map((location, index) => (
                   <div
                     key={index}
-                    className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden shadow-xl"
+                    className="bg-white border border-orange-200 rounded-3xl overflow-hidden shadow-xl"
                   >
                     <iframe
                       src={location.mapEmbed}
@@ -309,14 +277,13 @@ export default function RetamaMaquinaria() {
                       height="250"
                       style={{ border: 0 }}
                       loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
                       title={`map-${index}`}
                     />
 
                     <div className="p-6">
                       <h4 className="text-2xl font-bold mb-2">{location.title}</h4>
-                      <p className="text-slate-300 mb-1">{location.address}</p>
-                      <p className="text-slate-400 text-sm">{location.schedule}</p>
+                      <p className="text-slate-700 mb-1">{location.address}</p>
+                      <p className="text-slate-500 text-sm">{location.schedule}</p>
                     </div>
                   </div>
                 ))}
@@ -327,7 +294,7 @@ export default function RetamaMaquinaria() {
 
         {activeSection === "Máquinas en venta" && (
           <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
-            <h2 className="text-4xl font-black text-yellow-400 mb-8">Máquinas en venta</h2>
+            <h2 className="text-4xl font-black text-orange-500 mb-8">Máquinas en venta</h2>
 
             <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
               {maquinariaVenta.map((item, index) => (
@@ -345,7 +312,7 @@ export default function RetamaMaquinaria() {
 
         {activeSection === "Máquinas en renta" && (
           <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
-            <h2 className="text-4xl font-black text-yellow-400 mb-8">Máquinas en renta</h2>
+            <h2 className="text-4xl font-black text-orange-500 mb-8">Máquinas en renta</h2>
 
             <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
               {maquinariaRenta.map((item, index) => (
@@ -363,30 +330,30 @@ export default function RetamaMaquinaria() {
 
         {activeSection === "Contacto" && (
           <section className="max-w-4xl mx-auto px-4 md:px-6 py-16">
-            <div className="bg-white/5 border border-white/10 rounded-[2rem] p-10 shadow-2xl">
-              <h2 className="text-4xl font-black text-yellow-400 mb-6">Contacto</h2>
+            <div className="bg-white border border-orange-200 rounded-[2rem] p-10 shadow-2xl">
+              <h2 className="text-4xl font-black text-orange-500 mb-6">Contacto</h2>
 
               <div className="space-y-6 text-lg">
                 <div>
-                  <p className="text-slate-400">WhatsApp</p>
+                  <p className="text-slate-500">WhatsApp</p>
                   <a
                     href={`https://wa.me/${company.whatsapp.replace(/[^\d]/g, "")}`}
-                    className="font-bold hover:text-yellow-400"
+                    className="font-bold text-slate-900 hover:text-orange-500"
                   >
                     {company.whatsapp}
                   </a>
                 </div>
 
                 <div>
-                  <p className="text-slate-400">Correo</p>
-                  <a href={`mailto:${company.email}`} className="font-bold hover:text-yellow-400">
+                  <p className="text-slate-500">Correo</p>
+                  <a href={`mailto:${company.email}`} className="font-bold text-slate-900 hover:text-orange-500">
                     {company.email}
                   </a>
                 </div>
 
                 <div>
-                  <p className="text-slate-400">Teléfono</p>
-                  <a href={`tel:${company.phone}`} className="font-bold hover:text-yellow-400">
+                  <p className="text-slate-500">Teléfono</p>
+                  <a href={`tel:${company.phone}`} className="font-bold text-slate-900 hover:text-orange-500">
                     {company.phone}
                   </a>
                 </div>
@@ -394,10 +361,11 @@ export default function RetamaMaquinaria() {
             </div>
           </section>
         )}
+
       </main>
 
-      <footer className="border-t border-white/10 mt-10">
-        <div className="max-w-7xl mx-auto px-6 py-6 text-center text-slate-400">
+      <footer className="border-t border-orange-200 mt-10">
+        <div className="max-w-7xl mx-auto px-6 py-6 text-center text-slate-500">
           © 2026 {company.name}. Todos los derechos reservados.
         </div>
       </footer>
