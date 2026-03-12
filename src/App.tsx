@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function RetamaMaquinaria() {
   const company = {
@@ -19,14 +19,14 @@ export default function RetamaMaquinaria() {
     locations: [
       {
         title: "Sucursal 1",
-        address: "Santa Catarina, Nuevo León",
+        address: "Sanata Catarina, Nuevo León",
         schedule: "Lunes a Viernes: 8:00 AM - 6:00 PM | Sábado: 8:00 AM - 2:00 PM",
         mapEmbed:
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.6845759993744!2d-100.46540809999999!3d25.6817488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662996b90158c59%3A0x4c93c6b953d991bd!2sRetama%20Maquinaria!5e0!3m2!1ses!2smx!4v1773340678138!5m2!1ses!2smx",
       },
       {
         title: "Sucursal 2",
-        address: " Montemorelos, Nuevo León",
+        address: "Montemorelos, Nuevo León",
         schedule: "Lunes a Viernes: 8:00 AM - 6:00 PM | Sábado: 8:00 AM - 2:00 PM",
         mapEmbed:
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.31261958407!2d-99.8134802!3d25.1926778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x867cd7cd45372baf%3A0x9d295f27e6c017c6!2sRetama%20Maquinaria%20(Suc.%20Montemorelos)!5e0!3m2!1ses!2smx!4v1773340826731!5m2!1ses!2smx",
@@ -156,6 +156,11 @@ export default function RetamaMaquinaria() {
   const sections = ["Inicio", "Máquinas en venta", "Máquinas en renta", "Contacto"];
 
   const [activeSection, setActiveSection] = useState("Inicio");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [activeSection]);
 
   const sectionButtonClass = (name: string) =>
     `px-4 py-2 rounded-full text-sm md:text-base transition-all duration-300 border ${
@@ -172,33 +177,75 @@ export default function RetamaMaquinaria() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(245,158,11,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.12),_transparent_28%)] pointer-events-none" />
 
       <header className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex flex-col lg:flex-row gap-4 items-center justify-between">
-          <div className="flex items-center gap-4 w-full lg:w-auto">
-            <img
-              src={company.logo}
-              alt="Logo Retama Maquinaria"
-              className="w-24 h-24 md:w-28 md:h-28 object-contain rounded-2xl p-1"
-            />
-            <div>
-              <h1 className="text-2xl md:text-3xl font-black tracking-wide text-yellow-400">
-                {company.name}
-              </h1>
-              <p className="text-slate-300 text-sm md:text-base">{company.slogan}</p>
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-4 min-w-0">
+              <img
+                src={company.logo}
+                alt="Logo Retama Maquinaria"
+                className="w-20 h-20 md:w-28 md:h-28 object-contain rounded-2xl p-1 shrink-0"
+              />
+              <div className="min-w-0">
+                <h1 className="text-3xl md:text-5xl font-black tracking-wide text-yellow-400 leading-tight">
+                  {company.name}
+                </h1>
+                <p className="text-slate-300 text-sm md:text-base max-w-2xl">
+                  {company.slogan}
+                </p>
+              </div>
             </div>
+
+            <button
+              type="button"
+              className="md:hidden inline-flex items-center justify-center w-12 h-12 rounded-2xl border border-white/15 bg-white/10 text-white hover:bg-white/20 transition shrink-0"
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              aria-label="Abrir menú"
+              aria-expanded={mobileMenuOpen}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                )}
+              </svg>
+            </button>
+
+            <nav className="hidden md:flex flex-wrap gap-2 justify-end">
+              {sections.map((section) => (
+                <button
+                  key={section}
+                  onClick={() => setActiveSection(section)}
+                  className={sectionButtonClass(section)}
+                  type="button"
+                >
+                  {section}
+                </button>
+              ))}
+            </nav>
           </div>
 
-          <nav className="flex flex-wrap gap-2 justify-center lg:justify-end">
-            {sections.map((section) => (
-              <button
-                key={section}
-                onClick={() => setActiveSection(section)}
-                className={sectionButtonClass(section)}
-                type="button"
-              >
-                {section}
-              </button>
-            ))}
-          </nav>
+          {mobileMenuOpen && (
+            <nav className="md:hidden mt-4 grid grid-cols-1 gap-3">
+              {sections.map((section) => (
+                <button
+                  key={section}
+                  onClick={() => setActiveSection(section)}
+                  className={`${sectionButtonClass(section)} w-full justify-center text-base py-3`}
+                  type="button"
+                >
+                  {section}
+                </button>
+              ))}
+            </nav>
+          )}
         </div>
       </header>
 
