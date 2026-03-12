@@ -166,7 +166,7 @@ export default function RetamaMaquinaria() {
               <img
                 src={company.logo}
                 alt="Logo Retama Maquinaria"
-                className="w-30 h-30 md:w-48 md:h-40 object-contain rounded-2xl p-1 shrink-0"
+                className="w-28 h-20 md:w-48 md:h-40 object-contain rounded-2xl p-1 shrink-0"
               />
               <div className="min-w-0">
                 <h1 className="text-3xl md:text-5xl font-black tracking-wide text-orange-500 leading-tight">
