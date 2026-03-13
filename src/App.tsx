@@ -32,7 +32,7 @@ export default function RetamaMaquinaria() {
     ],
 
     social: {
-      facebook: "https://www.facebook.com/p/Retama-Maquinaria-100063958413759/?locale=es_LA",
+      facebook: "https://www.facebook.com/share/1PAUte2SDq/?mibextid=wwXIfr",
     },
   };
 
@@ -358,6 +358,16 @@ export default function RetamaMaquinaria() {
                   <a href={`tel:${company.phone}`} className="font-bold text-slate-900 hover:text-orange-500">
                     {company.phone}
                   </a>
+                </div>
+
+                <div>
+                  <p className="text-slate-400">Facebook</p>
+                  <a href={company.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold hover:text-yellow-400">
+                Retama Maquinaria 
+                </a>
                 </div>
               </div>
             </div>
