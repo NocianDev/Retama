@@ -124,12 +124,12 @@ export default function RetamaMaquinaria() {
   ];
 
   const maquinariaRenta = [
-    { name: "Compactadora", image: "/Images/Renta1.png", description: "Compactadora vibratoria ideal para compactar suelos, grava y asfalto en obras pequeñas y medianas." },
+    { name: "Compactadora", image: "/Images/Renta1.jpg", description: "Compactadora vibratoria ideal para compactar suelos, grava y asfalto en obras pequeñas y medianas." },
     { name: "Revolvedora", image: "/Images/Renta2.jpg", description: "Revolvedora de concreto resistente para preparación rápida y uniforme de mezcla en construcción." },
-    { name: "Rodillos Vibrocompactador de 1.2 ton", image: "/Images/Renta4.webp", description: "Rodillo ligero perfecto para compactación en banquetas, áreas pequeñas y mantenimiento urbano." },
-    { name: "Rodillo Vibrocompactador de 3.5 ton", image: "/Images/Renta3.webp", description: "Rodillo pesado ideal para compactación de bases, caminos y superficies en obra civil." },
+    { name: "Rodillos Vibrocompactador de 1.2 ton", image: "/Images/Renta4.jpg", description: "Rodillo ligero perfecto para compactación en banquetas, áreas pequeñas y mantenimiento urbano." },
+    { name: "Rodillo Vibrocompactador de 3.5 ton", image: "/Images/Renta3.jpg", description: "Rodillo pesado ideal para compactación de bases, caminos y superficies en obra civil." },
     { name: "Allanadoras de concreto", image: "/Images/Renta5.webp", description: "Allanadoras profesionales para acabado fino y nivelación de superficies de concreto." },
-    { name: "Vibrador de concreto", image: "/Images/Renta6.webp", description: "Equipo esencial para eliminar burbujas y lograr mayor resistencia en estructuras de concreto." },
+    { name: "Vibrador de concreto", image: "/Images/Renta6.jpg", description: "Equipo esencial para eliminar burbujas y lograr mayor resistencia en estructuras de concreto." },
     { name: "Rompedoras de concreto", image: "/Images/Renta7.jpg", description: "Martillos rompedores potentes para demolición de concreto, pavimento y estructuras." },
     { name: "Máquinas de soldar miller bobcat", image: "/Images/Renta8.jpg", description: "Equipo de soldadura industrial ideal para trabajos en campo con generador integrado." },
     { name: "Cortadora de concreto", image: "/Images/Renta9.jpg", description: "Cortadora de alto rendimiento para cortes precisos en concreto y pavimento." },
@@ -294,7 +294,7 @@ export default function RetamaMaquinaria() {
 
         {activeSection === "Máquinas en venta" && (
           <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
-            <h2 className="text-4xl font-black text-orange-500 mb-8">Máquinas en venta</h2>
+            <h2 className="text-4xl font-black text-orange-500 mb-8">Máquinaria en venta</h2>
 
             <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
               {maquinariaVenta.map((item, index) => (
@@ -312,12 +312,12 @@ export default function RetamaMaquinaria() {
 
         {activeSection === "Máquinas en renta" && (
           <section className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
-            <h2 className="text-4xl font-black text-orange-500 mb-8">Máquinas en renta</h2>
+            <h2 className="text-4xl font-black text-orange-500 mb-8">Máquinaria en renta</h2>
 
             <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
               {maquinariaRenta.map((item, index) => (
                 <div key={index} className={cardClass}>
-                  <img src={item.image} alt={item.name} className="w-full h-60 object-cover" />
+                  <img src={item.image} alt={item.name} className="w-full h-62 object-cover" />
                   <div className="p-5 text-slate-900">
                     <h3 className="text-xl font-black mb-2">{item.name}</h3>
                     <p className="text-slate-600 leading-relaxed">{item.description}</p>
