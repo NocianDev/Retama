@@ -136,6 +136,8 @@ export default function RetamaMaquinaria() {
     { name: "Plantas de luz 3500, 5000 y 8000 watts", image: "/Images/Renta10.webp", description: "Plantas de luz portátiles ideales para respaldar energía en obras y eventos." },
     { name: "Generadores remolcables de 25 y 45 kva", image: "/Images/Renta11.webp", description: "Generadores industriales remolcables de alta potencia para proyectos grandes." },
     { name: "Torres de iluminación", image: "/Images/Renta12.jpg", description: "Torres de iluminación para trabajos nocturnos y zonas con poca visibilidad." },
+     { name: "Placa vibatoria", image: "/Images/Renta13.jpg", description: "Placa vibratoria ideal para compactación de suelo, grava y asfalto en trabajos de construcción." },
+      { name: "Bomba de agua 2x2", image: "/Images/Renta14.webp", description: "Bomba de agua 2x2 diseñada para el traslado eficiente de agua en obras, riego y drenaje." },
   ];
 
   const sections = ["Inicio", "Máquinas en venta", "Máquinas en renta", "Contacto"];
